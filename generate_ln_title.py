@@ -1,3 +1,4 @@
+#!/usr/bin/python
 """
 Main module, defining functions for generating light novel titles.
 Lots of ugly lambdas to simulate laziness xd
