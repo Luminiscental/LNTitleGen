@@ -139,7 +139,7 @@ def get_infinitive(target=False):
             lambda: "Meditate",
             lambda: "Sleep",
             lambda: "Start Life Again",
-            lambda: "Cry A Lot",
+            lambda: "Cry",
         ]
     )
 
