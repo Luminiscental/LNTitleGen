@@ -198,7 +198,7 @@ def get_action():
             lambda: f"I'd Even {get_infinitive(target=True)()} A {get_adjective()()} {get_noun()()}",
             lambda: f"I {get_past_participle(target=True)()} {get_adjective(plural=True)()} {pluralize(get_noun()())}",
             lambda: f"My {get_adjective()()} {get_noun()()} Is {get_adjective()()}",
-            lambda: f"You {get_past_participle(target=True)()} Some {get_adjective(plural=True)()} {pluralize(get_noun()())}",
+            lambda: f"You {get_past_participle(target=True)()} Some {get_adjective()()} {pluralize(get_noun()())}",
             lambda: f"I Can't {get_infinitive(target=True)()} You",
             lambda: f"I Got {get_past_participle()()} By A {get_adjective()()} {get_noun()()}",
         ]
