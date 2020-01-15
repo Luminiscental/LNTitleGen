@@ -53,7 +53,7 @@ def get_adjective(plural=False):
             lambda: "Certain",
             lambda: "Brilliant",
             lambda: "Realist",
-            lambda: "Last",
+            lambda: "Lost",
             lambda: "Irregular",
             lambda: "Crazy",
             lambda: "Dark",
