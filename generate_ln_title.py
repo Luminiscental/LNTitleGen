@@ -198,7 +198,9 @@ def get_action():
 
 def get_title():
     """Generate a random title."""
-    return lambda: f"{get_prefix()()} {get_action()()} {get_suffix()()}"
+    return lambda: f"{get_prefix()()} {get_action()()} {get_suffix()()}".replace(
+        "Picking Up Me", "Picking Me Up"
+    )
 
 
 def run():
