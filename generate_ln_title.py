@@ -206,8 +206,7 @@ def run():
     count = 1
     if len(sys.argv) > 1:
         count = int(sys.argv[1])
-    for _ in range(count):
-        print(get_title()())
+    print("\n\n".join(get_title()() for _ in range(count)))
 
 
 if __name__ == "__main__":
