@@ -6,6 +6,15 @@ import sys
 import random
 
 
+def pluralize(noun):
+    """Pluralize a given noun string."""
+    if noun.endswith(("x", "s")):
+        return noun + "es"
+    if noun.endswith("y"):
+        return noun[:-1] + "ies"
+    return noun + "s"
+
+
 def get_noun():
     """Pick a random noun."""
     return random.choice(
@@ -154,7 +163,7 @@ def get_suffix():
             lambda: f"And So {get_action()()}",
             lambda: f"And It Was {get_adjective()()}",
             lambda: f"But Whatever, {get_action()()}",
-            lambda: f"So Why Do {get_noun()()}s Keep {get_present_continuous(target=True)()} Me?",
+            lambda: f"So Why Do {pluralize(get_noun()())} Keep {get_present_continuous(target=True)()} Me?",
         ]
     )
 
@@ -166,7 +175,7 @@ def get_prefix():
             lambda: f"If It's For My {get_noun()()},",
             lambda: f"Is It Wrong That",
             lambda: f"I've Been {get_present_continuous()()} And",
-            lambda: f"How Not To {get_infinitive(target=True)()} {get_noun()()}s:",
+            lambda: f"How Not To {get_infinitive(target=True)()} {pluralize(get_noun()())}:",
             lambda: f"I Keep {get_present_continuous()()} And",
             lambda: f"I Love To {get_infinitive()()} But",
             lambda: f"Didn't I Say",
@@ -187,9 +196,9 @@ def get_action():
             lambda: f"I'm {get_present_continuous(target=False)()}",
             lambda: f"A {get_adjective()()} {get_noun()()} {get_past_participle(target=True)()} Me",
             lambda: f"I'd Even {get_infinitive(target=True)()} A {get_adjective()()} {get_noun()()}",
-            lambda: f"I {get_past_participle(target=True)()} {get_adjective(plural=True)()} {get_noun()()}s",
+            lambda: f"I {get_past_participle(target=True)()} {get_adjective(plural=True)()} {pluralize(get_noun()())}",
             lambda: f"My {get_adjective()()} {get_noun()()} Is {get_adjective()()}",
-            lambda: f"You {get_past_participle(target=True)()} Some {get_adjective(plural=True)()} {get_noun()()}s",
+            lambda: f"You {get_past_participle(target=True)()} Some {get_adjective(plural=True)()} {pluralize(get_noun()())}",
             lambda: f"I Can't {get_infinitive(target=True)()} You",
             lambda: f"I Got {get_past_participle()()} By A {get_adjective()()} {get_noun()()}",
         ]
